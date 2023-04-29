@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import FormData from "./components/formData";
+import InfoTable from "./components/infoTable";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/*<HookUseRef/>*/}
+      {/*<FetchApi/>*/}
+      {/* <PostData />*/}
+      <Routes>
+        <Route path="/" element={<InfoTable />}></Route>
+        <Route path="/formData" element={<FormData />}></Route>
+      </Routes>
     </div>
   );
 }
